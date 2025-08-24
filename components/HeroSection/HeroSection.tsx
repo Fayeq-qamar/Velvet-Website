@@ -1,6 +1,7 @@
 "use client"
 
 import { Navigation } from "components/Navigation/Navigation"
+import { WaitlistForm } from "components/WaitlistForm/WaitlistForm"
 
 export function HeroSection() {
   return (
@@ -112,17 +113,12 @@ export function HeroSection() {
             <span className="text-white/70">Velvet adapts to how your brain actually works.</span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <button 
-              className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-blue-600/30 backdrop-blur-md border border-blue-400/30 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(59,130,246,0.3)] hover:bg-blue-500/40 hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] hover:-translate-y-1 w-[200px]"
-            >
-              <span className="whitespace-nowrap">JOIN WAITLIST</span>
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </button>
+          <div className="space-y-4">
+            <WaitlistForm />
             
             <a 
               href="#" 
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-600/20 backdrop-blur-md border border-slate-400/20 text-white no-underline rounded-full text-lg font-medium transition-all duration-300 hover:bg-slate-500/30 hover:border-slate-300/30 w-[180px]"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-3 bg-slate-600/20 backdrop-blur-md border border-slate-400/20 text-white no-underline rounded-full text-base font-medium transition-all duration-300 hover:bg-slate-500/30 hover:border-slate-300/30"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               <span className="whitespace-nowrap">See how it works</span>
