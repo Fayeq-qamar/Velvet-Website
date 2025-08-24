@@ -5,10 +5,11 @@ import { useEffect } from "react"
 interface ThankYouModalProps {
   isOpen: boolean
   onClose: () => void
+  name: string
   email: string
 }
 
-export function ThankYouModal({ isOpen, onClose, email }: ThankYouModalProps) {
+export function ThankYouModal({ isOpen, onClose, name, email }: ThankYouModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -60,7 +61,7 @@ export function ThankYouModal({ isOpen, onClose, email }: ThankYouModalProps) {
         {/* Content */}
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
-            Thank you for joining!
+            {name ? `Thank you, ${name}!` : 'Thank you for joining!'}
           </h2>
           <p className="text-white/80 mb-4">
             Welcome to the Velvet waitlist. We've sent a confirmation to:
@@ -69,7 +70,7 @@ export function ThankYouModal({ isOpen, onClose, email }: ThankYouModalProps) {
             {email}
           </p>
           <p className="text-white/70 text-sm">
-            You'll be among the first to know when Velvet launches.
+            {name ? `${name}, you'll` : "You'll"} be among the first to know when Velvet launches.
             <br />
             <span className="text-purple-300">Soft support for sharp minds.</span>
           </p>

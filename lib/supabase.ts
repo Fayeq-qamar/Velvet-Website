@@ -15,15 +15,18 @@ export type Database = {
       waitlist: {
         Row: {
           id: number
+          name?: string
           email: string
           created_at: string
           referral_source?: string
         }
         Insert: {
+          name?: string
           email: string
           referral_source?: string
         }
         Update: {
+          name?: string
           email?: string
           referral_source?: string
         }
