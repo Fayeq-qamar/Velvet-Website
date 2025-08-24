@@ -39,6 +39,9 @@ export function WaitlistForm() {
 
     // Check if Supabase is configured
     if (!supabase) {
+      console.error('Supabase client is null - checking environment variables...')
+      console.error('SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? 'Set' : 'Missing')
+      console.error('SUPABASE_KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'Set' : 'Missing')
       setError("Waitlist service is currently unavailable. Please try again later.")
       return
     }
