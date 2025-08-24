@@ -30,6 +30,12 @@ export function WaitlistForm() {
       return
     }
 
+    // Check if Supabase is configured
+    if (!supabase) {
+      setError("Waitlist service is currently unavailable. Please try again later.")
+      return
+    }
+
     setIsLoading(true)
 
     try {
