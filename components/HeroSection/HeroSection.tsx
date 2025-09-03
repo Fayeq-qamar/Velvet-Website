@@ -5,7 +5,7 @@ import { WaitlistForm } from "components/WaitlistForm/WaitlistForm"
 
 export function HeroSection() {
   return (
-    <div className="relative min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
+    <div className="relative h-screen bg-[#0a0a0a] text-white overflow-hidden sticky top-0">
       {/* Navigation */}
       <Navigation />
 
@@ -115,17 +115,30 @@ export function HeroSection() {
           
           <div className="space-y-4">
             <WaitlistForm />
-            
-            <a 
-              href="#" 
-              className="group inline-flex items-center justify-center gap-3 px-8 py-3 bg-slate-600/20 backdrop-blur-md border border-slate-400/20 text-white no-underline rounded-full text-base font-medium transition-all duration-300 hover:bg-slate-500/30 hover:border-slate-300/30"
-            >
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="whitespace-nowrap">See how it works</span>
-            </a>
           </div>
         </div>
 
+
+        {/* Scroll Down Indicator - Bottom Left */}
+        <div className="absolute left-10 bottom-8 hidden lg:flex flex-col items-center gap-3 animate-bounce-slow">
+          <span className="text-white/70 text-lg font-light tracking-wide">scroll down</span>
+          <div className="w-px h-12 bg-gradient-to-b from-white/70 to-transparent"></div>
+          <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse"></div>
+        </div>
+
+        {/* Velvet Interface - Right Center Bottom */}
+        <div className="absolute right-20 bottom-16 hidden lg:block">
+          <div className="relative transform hover:scale-[1.02] transition-transform duration-700">
+            <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 rounded-3xl blur-2xl animate-pulse-gentle"></div>
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-4 border border-white/10 shadow-2xl">
+              <img 
+                src="/velvet-hero-interface.png" 
+                alt="Velvet app interface - neurodivergent-friendly productivity tools"
+                className="rounded-2xl shadow-2xl w-full max-w-[900px] h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
