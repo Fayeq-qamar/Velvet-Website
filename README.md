@@ -1,6 +1,6 @@
 # Velvet-Website
 
-Velvet's Website - Do check out <3
+Velvet's Website - Do check out <3 - https://www.getvelvet.in/
 
 # Velvet Website
 
