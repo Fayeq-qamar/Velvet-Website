@@ -37,7 +37,6 @@ A stunning web experience designed with love and care for the Velvet community.
 </a>
 
 <br/>
-![Visitor Count](https://komarev.com/ghpvc/?username=Fayeq-qamar&color=blueviolet)
 <br/><br/>
 
 </div>
